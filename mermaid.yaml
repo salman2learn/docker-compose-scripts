@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  mermaid:
+    image: ghcr.io/mermaid-js/mermaid-live-editor
+    ports:
+      - 3001:8080/tcp
+
+# For large diagrams: in web ui, config, set maxTextSize: 90000
