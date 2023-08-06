@@ -1,0 +1,15 @@
+version: "3.9"
+
+volumes:
+  rustpad_data:
+  
+services:
+  server:
+    image: ekzhang/rustpad:latest
+    restart: unless-stopped
+    ports:
+      - "3030:3030"
+    volumes:
+      - rustpad_data:/data
+    environment:
+      - "EXPIRY_DAYS=3650"
