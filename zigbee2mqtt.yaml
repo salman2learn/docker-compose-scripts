@@ -1,0 +1,19 @@
+version: '3.8'
+
+volumes:
+  zigbee2mqtt_data:
+  
+services:
+  zigbee2mqtt:
+    container_name: zigbee2mqtt
+    restart: unless-stopped
+    image: koenkk/zigbee2mqtt
+    volumes:
+      - zigbee2mqtt_data:/app/data
+      - /run/udev:/run/udev:ro
+    ports:
+      - 8081:8081
+    environment:
+      - TZ=America/Chicago
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0
