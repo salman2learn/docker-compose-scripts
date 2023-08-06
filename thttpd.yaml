@@ -1,0 +1,13 @@
+version: "3.3"
+
+volumes:
+  thttpd_data:
+
+services:
+  web:
+    image: lipanski/docker-static-website:latest
+    restart: unless-stopped
+    volumes:
+      - thttpd_data:/home/static
+    ports:
+      - "8088:3000"
