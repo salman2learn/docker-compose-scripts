@@ -1,0 +1,8 @@
+version: '3.5'
+services:
+  drawio:
+    image: jgraph/drawio
+    container_name: drawio
+    restart: unless-stopped
+    ports:
+      - 4040:8080
