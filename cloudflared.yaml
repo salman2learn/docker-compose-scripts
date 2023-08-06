@@ -1,0 +1,19 @@
+version: "2.1"
+
+volumes:
+  cloudflared_config:
+  
+services:
+  heimdall:
+    image: cloudflare/cloudflared
+    container_name: cloudflared
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Chicago
+    volumes:
+      - cloudflared_config:/etc/cloudflared  # likely incorrect vol
+    command: tunnel run
+    environment:
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN}
+    restart: unless-stopped
