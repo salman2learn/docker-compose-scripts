@@ -1,5 +1,5 @@
 # docker-compose-scripts
-Minimal scripts almost to quickly setup apps on portainer behind firewall. Where possible, storage volumes are created to preserve data. For Home LAN usage; minimal or no security.
+Minimal scripts to quickly setup apps on portainer behind firewall. Where possible, storage volumes are created to preserve data. For Home LAN usage; minimal or no security.
 
 | Script                         | Descr                                                 |
 | ------------------------------ | ----------------------------------------------------- |
